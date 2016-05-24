@@ -1,5 +1,6 @@
 package pages;
 
+import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
 /**
@@ -15,5 +16,11 @@ public class BookHotelConfirmationPage extends OpentapsWrappers {
         clickByXpath(prop.getProperty("LogoutPage.Logout.Link"));
         return this;
 
+    }
+
+    public BookHotelConfirmationPage verifyTotelPrice(String price){
+        if(!verifyTextboxValueById(prop.getProperty("bookconfirmation.totalprice.id"),price))
+            Reporter.reportStep("Price Not Matched with the Entered Data ","FAIL");
+        return this ;
     }
 }

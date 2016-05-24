@@ -1,6 +1,5 @@
 package wrappers;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,22 +8,21 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
+import com.google.common.base.Function;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
-
-
-
-
-
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.support.ui.Wait;
 import utils.Reporter;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 
 public class GenericWrappers {
 
@@ -853,7 +851,20 @@ public class GenericWrappers {
 	public void selectByVisibleTextByID(String id,String value){
 		new Select(driver.findElement(By.id(id))).selectByVisibleText(value);
 	}
+	public void fluentWait(final By element, int totalWait, int pollingInterval)
+	{
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+				.withTimeout(totalWait, SECONDS)
+				.pollingEvery(pollingInterval, SECONDS)
+				.ignoring(NoSuchElementException.class);
 
+		WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
+			public WebElement apply(WebDriver driver) {
+				return driver.findElement(element);
+			}
+		});
+
+	}
 
 
 }

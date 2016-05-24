@@ -1,5 +1,5 @@
 package pages;
-
+import org.openqa.selenium.By;
 import wrappers.OpentapsWrappers;
 import utils.Reporter;
 import java.util.Date;
@@ -134,16 +134,21 @@ public class SearchHotelPage extends OpentapsWrappers {
         enterById(prop.getProperty("Home.cvv.id"),cvv);
         return this;
     }
+
+
+
     public SearchHotelPage clickBooknow() throws InterruptedException {
         clickById(prop.getProperty("home.booknow.id"));
-        Thread.sleep(10000);
+        fluentWait(By.id(prop.getProperty("Book.Confirm.OrderNumber")), 30, 1);
         String orderNumber = getTextById(prop.getProperty("Book.Confirm.OrderNumber"));
         System.out.print("ord" + orderNumber);
         Reporter.reportStep("Order has been generated. Order Number is " + orderNumber,"PASS");
         if(orderNumber==null)
             Reporter.reportStep("Order is not created", "FAIL");
         return this;
-            }
+    }
+
+
     public SearchHotelPage clickMyItinerary() {
         clickById(prop.getProperty("Home.Myitinerary.id"));
         return this;
