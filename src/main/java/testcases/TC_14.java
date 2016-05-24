@@ -1,5 +1,6 @@
 package testcases;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -32,7 +33,7 @@ public class TC_14 extends OpentapsWrappers {
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-                .datePickin(checkInData)
+               // .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()
@@ -48,7 +49,9 @@ public class TC_14 extends OpentapsWrappers {
                 .enterCvvNumber(cvv)
                 .clickBooknow()
         ;
-       // Thread.sleep(10000);
+        boolean boolan = driver.findElement(By.id("order_no")).isEnabled();
+        System.out.print(boolan);
+       Thread.sleep(10000);
 
 
 

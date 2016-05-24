@@ -13,7 +13,7 @@ public class TC_12_FinalBillPrice extends OpentapsWrappers {
     @BeforeClass
     public void startTestCase() {
         browserName = "chrome";
-        dataSheetName = "TC08_VerifyTotalPrice";
+        dataSheetName = "TC12_FinalBillPrice";
         testCaseName = "TC03 -Adactin Check-Out Date Validation (POM)";
         testDescription = "Login to Adactin.com using POM framework";
     }
@@ -31,7 +31,7 @@ public class TC_12_FinalBillPrice extends OpentapsWrappers {
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-                .datePickin(checkInData)
+               // .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()

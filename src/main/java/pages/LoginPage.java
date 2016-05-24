@@ -3,6 +3,7 @@ package pages;
 
 //import org.testng.annotations.BeforeClass;
 
+import org.openqa.selenium.By;
 import utils.Reporter;
 import wrappers.OpentapsWrappers;
 
@@ -21,13 +22,14 @@ public class LoginPage extends OpentapsWrappers{
 	// Enter the password
 	public LoginPage enterPassword(String pass){
 		enterById(prop.getProperty("Login.Password.Id"), pass);
+
 		return this;
 	}
 
 	// Click Login
-	public HomePage clickLogin(){
+	public SearchHotelPage clickLogin(){
 		clickByClassName(prop.getProperty("Login.LoginButton.Class"));
-		return new HomePage();
+		return new SearchHotelPage();
 	}
 
 	public LogoutPage clickLogout(){

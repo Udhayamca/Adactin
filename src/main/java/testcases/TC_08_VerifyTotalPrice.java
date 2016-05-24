@@ -13,7 +13,7 @@ public class TC_08_VerifyTotalPrice extends OpentapsWrappers {
 
     @BeforeClass
     public void startTestCase(){
-        browserName 	= "firefox";
+        browserName 	= "chrome";
         dataSheetName 	= "TC08_VerifyTotalPrice";
         testCaseName 	= "TC03 -Adactin Check-Out Date Validation (POM)";
         testDescription = "Login to Adactin.com using POM framework";
@@ -23,12 +23,11 @@ public class TC_08_VerifyTotalPrice extends OpentapsWrappers {
 
     @Test(dataProvider="fetchData")
     public void verifyTotalPrice(String username,String password, String location, String hotels, String roomType, String noOfRooms,
-                               String checkInData, String checkOutDate,String adult) throws InterruptedException {
+                               String checkInData, String checkOutDate,String adult,String billPrice) throws InterruptedException {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
@@ -39,6 +38,8 @@ public class TC_08_VerifyTotalPrice extends OpentapsWrappers {
                 .clickSearch()
                 .selectHotel()
                 .clickContinue()
+                .verifyTotelPrice(billPrice)
+
         ;
 
 

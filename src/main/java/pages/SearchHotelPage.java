@@ -2,9 +2,18 @@ package pages;
 
 import wrappers.OpentapsWrappers;
 import utils.Reporter;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.lang.String;
 
 public class SearchHotelPage extends OpentapsWrappers {
 
+    public SearchHotelPage(){
+        if(!verifyTitle("AdactIn.com - Search Hotel")){
+            Reporter.reportStep("This is NOT Search Hotel page", "FAIL");
+        }
+    }
 
     public SearchHotelPage selectLocation(String location) {
         selectById(prop.getProperty("Home.location.id"), location);
@@ -26,8 +35,18 @@ public class SearchHotelPage extends OpentapsWrappers {
         return this;
     }
 
-    public SearchHotelPage datePickin(String pickIn) {
-        enterById(prop.getProperty("Home.checkIn.id"), pickIn);
+    public SearchHotelPage AutodatePickin() {
+        String Home_checkIn_id;
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        Date dateobj = new Date();
+       // System.out.println(df.format(dateobj));
+        Home_checkIn_id=(df.format(dateobj)+7);
+       // enterById(prop.getProperty("Home.checkIn.id"), Home_checkIn_id);
+        enterById("datepick_in",Home_checkIn_id);
+        return this;
+    }
+    public SearchHotelPage datePickin(String pickin) {
+        enterById(prop.getProperty("Home.checkIn.id"), pickin);
         return this;
     }
 
@@ -46,9 +65,9 @@ public class SearchHotelPage extends OpentapsWrappers {
         return this;
     }
 
-    public SearchHotelPage clickSearch() {
+    public SelectHotelPage clickSearch() {
         clickById(prop.getProperty("Search.Hotel.Search.Button.id"));
-        return this;
+        return new SelectHotelPage();
     }
 
     public SearchHotelPage arrivalDate(String arrivalDate) {
@@ -146,17 +165,12 @@ public class SearchHotelPage extends OpentapsWrappers {
         acceptAlert();
         return this;
     }
-    public SearchHotelPage(){
-        if(!verifyTitle("AdactIn.com - Search Hotel")){
-            Reporter.reportStep("This is NOT Search Hotel page", "FAIL");
-        }
-    }
+
     public SearchHotelPage verifyCheckInErrorMessage(String checkInError){
         if(!verifyTextById(prop.getProperty("SearchHotel.CheckIn.Error.id"),checkInError))
             Reporter.reportStep("Alert not  Present","FAIL");
 
-
-        return new SearchHotelPage();
+        return this ;
     }
 
 

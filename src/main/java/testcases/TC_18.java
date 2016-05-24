@@ -32,7 +32,7 @@ public class TC_18 extends OpentapsWrappers {
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-                .datePickin(checkInData)
+              //  .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()

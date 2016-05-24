@@ -12,7 +12,7 @@ import wrappers.OpentapsWrappers;
 public class TC_06_VerifyRoomCounts extends OpentapsWrappers {
     @BeforeClass
     public void startTestCase(){
-        browserName 	= "firefox";
+        browserName 	= "chrome";
         dataSheetName 	= "TC06_VerifyRoomCount";
         testCaseName 	= "TC03 -Adactin Check-Out Date Validation (POM)";
         testDescription = "Login to Adactin.com using POM framework";
@@ -22,12 +22,11 @@ public class TC_06_VerifyRoomCounts extends OpentapsWrappers {
 
     @Test(dataProvider="fetchData")
     public void verifyRoomCount(String username,String password, String location, String hotels, String roomType, String noOfRooms,
-                           String checkInData, String checkOutDate,String adult,String children) throws InterruptedException {
+                           String checkInData, String checkOutDate,String adult,String roomCount) throws InterruptedException {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
@@ -35,8 +34,8 @@ public class TC_06_VerifyRoomCounts extends OpentapsWrappers {
                 .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
-                .childrenperRoom(children)
                 .clickSearch()
+                .verifyRoomCount(roomCount)
         ;
 
 

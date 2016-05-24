@@ -14,7 +14,7 @@ public class TC_05_VerifyCheckin_CheckOutDate extends OpentapsWrappers {
 
     @BeforeClass
     public void startTestCase(){
-        browserName 	= "firefox";
+        browserName 	= "chrome";
         dataSheetName 	= "TC05_VerifyCheckinCheckoutDate";
         testCaseName 	= "TC03 -Adactin Checking Location Name As selceted  (POM)";
         testDescription = "Login to Adactin.com using POM framework";
@@ -24,12 +24,11 @@ public class TC_05_VerifyCheckin_CheckOutDate extends OpentapsWrappers {
 
     @Test(dataProvider="fetchData")
     public void verifyChechin_outDate(String username,String password, String location, String hotels, String roomType, String noOfRooms,
-                                String checkInData, String checkOutDate,String adult,String children,String arrDate,String deptDate) throws InterruptedException {
+                                String checkInData, String checkOutDate,String adult,String children) throws InterruptedException {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
@@ -38,8 +37,8 @@ public class TC_05_VerifyCheckin_CheckOutDate extends OpentapsWrappers {
                 .adultperRoom(adult)
                 .childrenperRoom(children)
                 .clickSearch()
-                .arrivalDate(arrDate)
-                .depatureDate(deptDate)
+                .arrivalDate(checkInData)
+                .depatureDate(checkOutDate)
         ;
 
 

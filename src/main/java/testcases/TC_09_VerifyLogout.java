@@ -13,8 +13,8 @@ public class TC_09_VerifyLogout extends OpentapsWrappers {
 
     @BeforeClass
     public void startTestCase(){
-        browserName 	= "firefox";
-        dataSheetName 	= "TC10_BookedHotelPrice";
+        browserName 	= "chrome";
+        dataSheetName 	= "TC09_VerifyLogout";
         testCaseName 	= "TC03 -Adactin Check-Out Date Validation (POM)";
         testDescription = "Login to Adactin.com using POM framework";
     }
@@ -27,8 +27,7 @@ public class TC_09_VerifyLogout extends OpentapsWrappers {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
@@ -47,6 +46,7 @@ public class TC_09_VerifyLogout extends OpentapsWrappers {
                 .enterexpmonth(expmonth)
                 .enterExpYear(expyear)
                 .enterCvvNumber(cvv)
+                .clickBooknow()
                 .clickLogout()
         ;
 
