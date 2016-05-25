@@ -58,4 +58,42 @@ public class BookHotelPage extends OpentapsWrappers {
         return new BookHotelConfirmationPage();
     }
 
+
+
+    public BookHotelPage verifyHotelName(String name) {
+        if(!verifyTextboxValueById(prop.getProperty("bookhotel.hotelname.id"), name))
+            Reporter.reportStep("entered location name does not match with the location shown in the search results", "FAIL");
+        return this;
+    }
+
+    public BookHotelPage verifyHotelLocation(String location) {
+        if(!verifyTextboxValueById(prop.getProperty("Bookhotel.verifylocation.id"), location))
+            Reporter.reportStep("entered location name does not match with the location shown in the search results", "FAIL");
+        return this;
+    }
+
+
+    public BookHotelPage verifyRoomType(String roomType){
+        if(!verifyTextboxValueById(prop.getProperty("bookhotel.verifyroomtype.id"),roomType))
+            Reporter.reportStep("Room type not match with the room type entered in search hotel ","FAIL");
+        return this ;
+    }
+
+    public BookHotelPage verifyTotalDay(String totalDays){
+        if(!verifyTextboxValueById(prop.getProperty("bookhotel.verifytotalday.id"),totalDays))
+            Reporter.reportStep("Room type not match with the room type entered in search hotel ","FAIL");
+        return this ;
+    }
+
+    public BookHotelPage verifyPriceperNight(String priceperNight){
+        if(!verifyTextboxValueById(prop.getProperty("bookhotel.verifypricepernight.id"),priceperNight))
+            Reporter.reportStep("Room type not match with the room type entered in search hotel ","FAIL");
+        return this ;
+    }
+    public BookHotelPage verifyFinalbilledPrice(String finalBill){
+        if(!verifyTextboxValueById(prop.getProperty("bookhotel.verifyfinalbill.id"),finalBill))
+            Reporter.reportStep("Room type not match with the room type entered in search hotel ","FAIL");
+        return this ;
+    }
+
 }

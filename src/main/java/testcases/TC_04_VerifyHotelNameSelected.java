@@ -37,7 +37,7 @@ public class TC_04_VerifyHotelNameSelected extends OpentapsWrappers {
                 .adultperRoom(adult)
                 .childrenperRoom(children)
                 .clickSearch()
-                .hotelName(name)
+                .hotelLocation(name)
         ;
 
 

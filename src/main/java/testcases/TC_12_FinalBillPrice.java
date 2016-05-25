@@ -21,22 +21,22 @@ public class TC_12_FinalBillPrice extends OpentapsWrappers {
 
     @Test(dataProvider = "fetchData")
     public void verifyFinalBillPriceTC_12(String username, String password, String location, String hotels, String roomType, String noOfRooms,
-                                          String checkInData, String checkOutDate, String adult) throws InterruptedException {
+                                          String checkInData, String checkOutDate, String adult,String finalbill) throws InterruptedException {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-               // .datePickin(checkInData)
+                .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()
                 .selectHotel()
                 .clickContinue()
+                .verifyFinalbilledPrice(finalbill)
         ;
 
     }

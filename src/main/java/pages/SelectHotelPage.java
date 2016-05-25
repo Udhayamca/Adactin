@@ -18,7 +18,7 @@ public class SelectHotelPage extends OpentapsWrappers {
         return new BookHotelPage();
 
     }
-    public SelectHotelPage hotelName(String name) {
+    public SelectHotelPage hotelLocation(String name) {
         if(!verifyTextboxValueById(prop.getProperty("Home.hotelName.id"), name))
             Reporter.reportStep("entered location name does not match with the location shown in the search results", "FAIL");
         return this;

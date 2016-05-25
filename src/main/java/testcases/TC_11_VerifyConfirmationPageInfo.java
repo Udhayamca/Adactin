@@ -14,30 +14,34 @@ public class TC_11_VerifyConfirmationPageInfo extends OpentapsWrappers {
     public void startTestCase(){
         browserName 	= "chrome";
         dataSheetName 	= "TC11_VerifyConfirmationpageInformation";
-        testCaseName 	= "TC03 -Adactin Check-Out Date Validation (POM)";
-        testDescription = "Login to Adactin.com using POM framework";
+        testCaseName 	= "TC11_VerifyConfirmationpageInformation (POM)";
+        testDescription = "TC11_VerifyConfirmationpageInformation using POM framework";
     }
 
 
 
     @Test(dataProvider="fetchData")
     public void verifyConfirmationPageInfoTC_11(String username,String password, String location, String hotels, String roomType, String noOfRooms,
-                                 String checkInData, String checkOutDate,String adult) throws InterruptedException {
+                                 String checkInData, String checkOutDate,String adult,String totalDay,String pricepernight) throws InterruptedException {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-               // .datePickin(checkInData)
+                .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()
                 .selectHotel()
                 .clickContinue()
+                .verifyHotelLocation(location)
+                .verifyHotelName(hotels)
+                .verifyRoomType(roomType)
+                .verifyTotalDay(totalDay)
+                .verifyPriceperNight(pricepernight)
         ;
 
 
