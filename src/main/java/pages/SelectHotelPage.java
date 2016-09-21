@@ -29,16 +29,12 @@ public class SelectHotelPage extends OpentapsWrappers {
     public SelectHotelPage arrivalDate(String arrivalDate){
         if(!verifyTextboxValueById(prop.getProperty("Home.verifyarrival.id"), arrivalDate))
             Reporter.reportStep(" Dates does not match with the Dates Entered in Search Hotel", "FAIL");
-
-
-       // verifyTextContainsById(prop .getProperty("Home.verifyarrival.id"),arrivalDate );
-        return this ;
+              return this ;
     }
     public SelectHotelPage depatureDate(String depatureDate){
         if(!verifyTextboxValueById(prop.getProperty("Home.verifydepature.id"), depatureDate))
             Reporter.reportStep(" Dates does not match with the Dates Entered in Search Hotel", "FAIL");
-       // verifyTextContainsById(prop .getProperty("Home.verifydepature.id"),depatureDate );
-        return this ;
+               return this ;
     }
     public SelectHotelPage verifyRoomCount(String roomCount){
         if(!verifyTextboxValueById(prop.getProperty("Select.Roomcount.id"),roomCount))

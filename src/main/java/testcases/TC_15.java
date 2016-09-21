@@ -26,13 +26,13 @@ public class TC_15 extends OpentapsWrappers {
         new LoginPage()
                 .enterUserName(username)
                 .enterPassword(password)
-                .clickLogin();
-        new SearchHotelPage()
+                .clickLogin()
+
                 .selectLocation(location)
                 .selectHotels(hotels)
                 .roomType(roomType)
                 .noOfRooms(noOfRooms)
-              //  .datePickin(checkInData)
+                .datePickin(checkInData)
                 .datePickout(checkOutDate)
                 .adultperRoom(adult)
                 .clickSearch()

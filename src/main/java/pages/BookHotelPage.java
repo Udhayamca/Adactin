@@ -51,7 +51,7 @@ public class BookHotelPage extends OpentapsWrappers {
         clickById(prop.getProperty("home.booknow.id"));
         Thread.sleep(10000);
         String orderNumber = getTextById(prop.getProperty("Book.Confirm.OrderNumber"));
-        System.out.print("ord" + orderNumber);
+      //  System.out.print("ord" + orderNumber);
         Reporter.reportStep("Order has been generated. Order Number is " + orderNumber,"PASS");
         if(orderNumber==null)
             Reporter.reportStep("Order is not created", "FAIL");
