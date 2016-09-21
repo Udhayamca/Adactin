@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35135cae-7c26-495b-8485-9c5b3cfd9729" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/testcases/TC_13.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/testcases/TC_14.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/testcases/TC_13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/testcases/TC_14.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC03_checkindate.xlsx" afterPath="$PROJECT_DIR$/data/TC03_checkindate.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC04_CheckSelectedHotelName.xlsx" afterPath="$PROJECT_DIR$/data/TC04_CheckSelectedHotelName.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC05_VerifyCheckinCheckoutDate.xlsx" afterPath="$PROJECT_DIR$/data/TC05_VerifyCheckinCheckoutDate.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC06_VerifyRoomCount.xlsx" afterPath="$PROJECT_DIR$/data/TC06_VerifyRoomCount.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC07_VerifyRoomType.xlsx" afterPath="$PROJECT_DIR$/data/TC07_VerifyRoomType.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC08_VerifyTotalPrice.xlsx" afterPath="$PROJECT_DIR$/data/TC08_VerifyTotalPrice.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/TC10_BookedHotelPrice.xlsx" afterPath="$PROJECT_DIR$/data/TC10_BookedHotelPrice.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/SelectHotelPage.class" afterPath="$PROJECT_DIR$/target/classes/pages/SelectHotelPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/testcases/TC_01_VerifyLoginDetails.class" afterPath="$PROJECT_DIR$/target/classes/testcases/TC_01_VerifyLoginDetails.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/testcases/TC_15.class" afterPath="$PROJECT_DIR$/target/classes/testcases/TC_15.class" />
+    <list default="true" id="35135cae-7c26-495b-8485-9c5b3cfd9729" name="Default" comment="database update">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/TC02_VerifyCheckoutDate.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/TC15.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/TC16.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/TC19.xlsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/TC20.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/object.properties" afterPath="$PROJECT_DIR$/object.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reports/result.html" afterPath="$PROJECT_DIR$/reports/result.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/BookHotelConfirmationPage.java" afterPath="$PROJECT_DIR$/src/main/java/pages/BookHotelConfirmationPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/BookHotelPage.java" afterPath="$PROJECT_DIR$/src/main/java/pages/BookHotelPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/SelectHotelPage.java" afterPath="$PROJECT_DIR$/src/main/java/pages/SelectHotelPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/testcases/TC_01_VerifyLoginDetails.java" afterPath="$PROJECT_DIR$/src/main/java/testcases/TC_01_VerifyLoginDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/testcases/TC_15.java" afterPath="$PROJECT_DIR$/src/main/java/testcases/TC_15.java" />
     </list>
     <ignored path="Jan.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +82,8 @@
       <file leaf-file-name="TC_03_VerifyCheckInDate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/testcases/TC_03_VerifyCheckInDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84158415">
-              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.13036303">
+              <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -381,6 +364,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="testcases" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Adactin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -878,7 +875,19 @@
       <option name="project" value="LOCAL" />
       <updated>1464712735369</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="database update">
+      <created>1474446124896</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1474446124896</updated>
+    </task>
+    <task id="LOCAL-00008" summary="database update">
+      <created>1474446447428</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1474446447428</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -919,6 +928,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -931,7 +941,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -959,7 +968,8 @@
     <MESSAGE value="After adding testsuite.xml and fluent wait(testcases 1 to 10)" />
     <MESSAGE value="updated test case for TC11 and TC12 with testNG" />
     <MESSAGE value="updated test case for TC13  with testNG" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated test case for TC13  with testNG" />
+    <MESSAGE value="database update" />
+    <option name="LAST_COMMIT_MESSAGE" value="database update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,8 +1350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/testcases/TC_03_VerifyCheckInDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84158415">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.13036303">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
           <folding />
         </state>
       </provider>
